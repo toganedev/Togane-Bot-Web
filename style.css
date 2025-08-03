@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background: #fff8f0;
+  color: #4a2e1f;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: #ffdcc3;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.3rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #5a3a2c;
+  margin-bottom: 1rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #8b4c2b;
+  background: #fff3e0;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a:hover {
+  background: #ffd7b2;
+  color: #cf5f2e;
+}
+
+main {
+  padding: 2rem 1rem 3rem;
+  max-width: 850px;
+  margin: auto;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0caa5;
+}
+
+h2 {
+  color: #8b4c2b;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+h3 {
+  color: #a2532d;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.command {
+  background: #ffeee0;
+  border: 1px solid #f0caa5;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.command:hover {
+  transform: scale(1.02);
+}
+
+footer {
+  text-align: center;
+  background: #ffe4d1;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #704c3f;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.3rem 0.5rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}
