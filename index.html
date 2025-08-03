@@ -9,35 +9,46 @@
 <body>
   <header>
     <h1>Togane Bot</h1>
-    <p>サーバー運営を支えるDiscord Bot</p>
+    <p>やさしく・しっかり・たのしい Discord Bot</p>
     <nav>
-      <a href="#commands">📘 コマンド一覧</a>
-      <a href="#terms">📃 利用規約</a>
+      <a href="#about">トップ</a>
+      <a href="#commands">コマンド一覧</a>
+      <a href="#terms">利用規約</a>
     </nav>
   </header>
 
   <main>
     <section id="about">
-      <h2>📌 Botについて</h2>
-      <p>
-        Togane Bot は、サーバー運営を快適にするための Discord Bot です。<br>
-        レベル機能、画像加工、スラッシュコマンド、AI返信など、今後も多くの機能を追加予定です。
-      </p>
+      <h2>👤 制作者について</h2>
+      <div class="profile">
+        <img src="profile.jpg" alt="togane_dev_92241" />
+        <div>
+          <p>Discord ID: <strong>togane_dev_92241</strong></p>
+          <p>作成者: Togane</p>
+          <a class="button" href="https://discord.gg/aJ2zgdUzg7" target="_blank">サポートサーバー</a>
+          <a class="button" href="https://discord.com/oauth2/authorize?client_id=1401470807288315985&permissions=8&integration_type=0&scope=bot" target="_blank">BOT を招待</a>
+        </div>
+      </div>
     </section>
 
     <section id="commands">
       <h2>📘 コマンド一覧</h2>
-      <div class="command">
-        <h3>/ping</h3>
-        <p>BotとDiscord APIの応答速度（レイテンシ）を確認します。<br>
-        Bot Latency / API Latency / WebSocket Ping を embed形式で表示します。</p>
-      </div>
+      <details>
+        <summary>/ping</summary>
+        <div class="command">
+          <h3>/ping</h3>
+          <p>BotとDiscord APIの応答速度（レイテンシ）を確認します。Bot Latency / API Latency / WebSocket Ping を embed形式で表示。</p>
+        </div>
+      </details>
     </section>
 
     <section id="terms">
       <h2>📃 利用規約</h2>
-      <ol>
-        <li>本Botを導入することで、本規約に同意したものとみなします。</li>
+      <details>
+        <summary>利用規約を開く（全○○項）</summary>
+        <ol>
+          <!-- ここに30項目例として入っています -->
+           <li>本Botを導入することで、本規約に同意したものとみなします。</li>
         <li>Botの悪用は禁止です。</li>
         <li>Botのコードや動作をリバースエンジニアリングしないでください。</li>
         <li>Botの管理者による強制退出は無条件で行われることがあります。</li>
@@ -77,7 +88,8 @@
         <li>Discord運営から指摘があった場合、即時対応を行う可能性があります。</li>
         <li>Botのトラブルがサーバーに影響を与えた場合も、責任は負いかねます。</li>
         <li>Botの利用開始は、必ず自己の責任で行ってください。</li>
-      </ol>
+        </ol>
+      </details>
     </section>
   </main>
 
