@@ -40,6 +40,40 @@
           <p>BotとDiscord APIの応答速度（レイテンシ）を確認します。Bot Latency / API Latency / WebSocket Ping を embed形式で表示。</p>
         </div>
       </details>
+      <details>
+  <summary>/verify</summary>
+  <div class="command">
+    <h3>/verify</h3>
+    <p>
+      指定したロールをユーザーに付与する認証機能です。2つの認証方法から選択可能です：
+    </p>
+    <ul>
+      <li><strong>✅ ワンタッチ認証</strong>：ボタンを押すだけでロールを付与</li>
+      <li><strong>🧠 計算認証</strong>：簡単な計算問題に正解するとロール付与</li>
+    </ul>
+    <p>
+      埋め込みタイトル、説明文、画像、ボタンスタイルをカスタマイズ可能。デバイスからアップロードした画像を使えます。
+    </p>
+  </div>
+</details>
+
+<details>
+  <summary>/welcome-setting</summary>
+  <div class="command">
+    <h3>/welcome-setting</h3>
+    <p>
+      サーバーへの新規参加者の入室ログを設定・削除するためのコマンドです。
+    </p>
+    <ul>
+      <li><code>/welcome-setting set</code>：入室ログの送信チャンネルを指定</li>
+      <li><code>/welcome-setting remove</code>：設定済みの入室ログを削除（削除確認あり）</li>
+    </ul>
+    <p>
+      設定後、管理者のDMにJSON形式で送信され、手動で <code>welcomeChannels.json</code> に反映されます。
+    </p>
+  </div>
+</details>
+
     </section>
 
     <section id="terms">
