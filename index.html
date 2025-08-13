@@ -209,6 +209,55 @@
     </ul>
   </div>
 </details>
+<details>
+  <summary>/kick</summary>
+  <div class="command">
+    <h3>/kick</h3>
+    <p>
+      指定したユーザーをサーバーからキックします。キック通知は管理者DMと実行チャンネル両方に送信されます。
+    </p>
+    <ul>
+      <li>対象者・実行者・理由・日時（日本時間・UTC+9）をEmbedで表示</li>
+      <li>BOTの権限不足や対象者がサーバーにいない場合はエラー通知</li>
+      <li>管理者のDMが閉じている場合は実行チャンネルのみ通知</li>
+    </ul>
+  </div>
+</details>
+
+<details>
+  <summary>/timeout</summary>
+  <div class="command">
+    <h3>/timeout</h3>
+    <p>
+      指定したユーザーを一定時間ミュート（タイムアウト）します。タイムアウト中はメッセージ送信やボイス参加ができません。
+    </p>
+    <ul>
+      <li>時間指定は以下から選択：
+        <ul>
+          <li>1分 / 5分 / 10分 / 30分 / 1時間 / 5時間 / 10時間 / 1日 / 7日</li>
+        </ul>
+      </li>
+      <li>管理者DMと実行チャンネルに、設定時間・開始時間・解除予定時間（日本時間・UTC+9）をEmbed送信</li>
+      <li>既にタイムアウト中の場合は、残り時間を秒単位で表示</li>
+      <li>対象者・実行者・理由を記録</li>
+    </ul>
+  </div>
+</details>
+
+<details>
+  <summary>/untimeout</summary>
+  <div class="command">
+    <h3>/untimeout</h3>
+    <p>
+      指定したユーザーのタイムアウトを解除します。
+    </p>
+    <ul>
+      <li>対象がタイムアウト中でない場合は「現在タイムアウトされていません」と通知</li>
+      <li>タイムアウト中の場合は残り時間を「日・時間・分・秒」に変換して表示し、確認後に解除</li>
+      <li>解除後、管理者DMと実行チャンネルに解除通知（対象者・実行者・解除日時）をEmbed送信</li>
+    </ul>
+  </div>
+</details>
 
     </section>
 
