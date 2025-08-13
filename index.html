@@ -154,6 +154,33 @@
     </ul>
   </div>
 </details>
+<details>
+  <summary>/ban</summary>
+  <div class="command">
+    <h3>/ban</h3>
+    <p>
+      指定したユーザーをサーバーからBANし、BAN通知をサーバー管理者へDMで送信します。
+    </p>
+    <ul>
+      <li>ユーザー指定方法：
+        <ul>
+          <li>サーバー内のユーザーを直接選択</li>
+          <li>ユーザーIDを指定（サーバー外のユーザーも可）</li>
+        </ul>
+      </li>
+      <li>BAN理由を必須で指定</li>
+      <li>処理完了後、以下の情報をEmbedでサーバー管理者へDM送信：
+        <ul>
+          <li>BAN実行者</li>
+          <li>BAN対象ユーザー（タグとID）</li>
+          <li>BAN理由</li>
+          <li>BAN日時（日本時間・UTC+9）</li>
+        </ul>
+      </li>
+      <li>管理者は通知からBAN履歴を即座に確認可能</li>
+    </ul>
+  </div>
+</details>
 
      
     </section>
