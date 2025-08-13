@@ -182,7 +182,34 @@
   </div>
 </details>
 
-     
+<details>
+  <summary>/unban</summary>
+  <div class="command">
+    <h3>/unban</h3>
+    <p>
+      指定したユーザーのBANを解除し、解除通知をサーバー管理者へDMで送信します。
+    </p>
+    <ul>
+      <li>ユーザー指定方法：
+        <ul>
+          <li>ユーザーIDを指定（サーバー外のユーザーも可）</li>
+        </ul>
+      </li>
+      <li>解除理由を必須で指定</li>
+      <li>処理完了後、以下の情報をEmbedでサーバー管理者へDM送信：
+        <ul>
+          <li>解除実行者</li>
+          <li>解除対象ユーザー（タグとID）</li>
+          <li>解除理由</li>
+          <li>解除日時（日本時間・UTC+9）</li>
+        </ul>
+      </li>
+      <li>解除前にBANリストを確認するため、既に解除済みのユーザーには「現在BANされていません」と通知（Unknown Ban対策）</li>
+      <li>管理者は通知から解除履歴を即座に確認可能</li>
+    </ul>
+  </div>
+</details>
+
     </section>
 
     <section id="terms">
