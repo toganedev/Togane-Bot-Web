@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Togane Bot</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    summary.toggle-all {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -32,31 +38,35 @@
     </section>
 
     <section id="commands">
-      <h2>📘 コマンド一覧</h2>
-      <details>
-        <summary>/ping</summary>
-        <div class="command">
-          <h3>/ping</h3>
-          <p>BotとDiscord APIの応答速度（レイテンシ）を確認します。Bot Latency / API Latency / WebSocket Ping を embed形式で表示。</p>
-        </div>
-      </details>
-      <details>
-  <summary>/verify</summary>
-  <div class="command">
-    <h3>/verify</h3>
-    <p>
-      指定したロールをユーザーに付与する認証機能です。2つの認証方法から選択可能です：
-    </p>
-    <ul>
-      <li><strong>✅ ワンタッチ認証</strong>：ボタンを押すだけでロールを付与</li>
-      <li><strong>🧠 計算認証</strong>：簡単な計算問題に正解するとロール付与</li>
-    </ul>
-    <p>
-      埋め込みタイトル、説明文、画像、ボタンスタイルをカスタマイズ可能。デバイスからアップロードした画像を使えます。
-    </p>
-  </div>
-</details>
+      <h2>
+        <details id="toggleAllCommands">
+          <summary class="toggle-all">📘 コマンド一覧</summary>
+          <div id="commandList">
+            <!-- ここに全ての details コマンドを入れる -->
+            <details>
+              <summary>/ping</summary>
+              <div class="command">
+                <h3>/ping</h3>
+                <p>BotとDiscord APIの応答速度（レイテンシ）を確認します。Bot Latency / API Latency / WebSocket Ping を embed形式で表示。</p>
+              </div>
+            </details>
 
+            <details>
+              <summary>/verify</summary>
+              <div class="command">
+                <h3>/verify</h3>
+                <p>
+                  指定したロールをユーザーに付与する認証機能です。2つの認証方法から選択可能です：
+                </p>
+                <ul>
+                  <li><strong>✅ ワンタッチ認証</strong>：ボタンを押すだけでロールを付与</li>
+                  <li><strong>🧠 計算認証</strong>：簡単な計算問題に正解するとロール付与</li>
+                </ul>
+                <p>
+                  埋め込みタイトル、説明文、画像、ボタンスタイルをカスタマイズ可能。デバイスからアップロードした画像を使えます。
+                </p>
+              </div>
+            </details>
 <details>
   <summary>/welcome-setting</summary>
   <div class="command">
@@ -258,7 +268,7 @@
     </ul>
   </div>
 </details>
-
+      </h2>
     </section>
 
     <section id="terms">
@@ -266,47 +276,46 @@
       <details>
         <summary>利用規約を開く（全40項）</summary>
         <ol>
-          <!-- ここに30項目例として入っています -->
-           <li>本Botを導入することで、本規約に同意したものとみなします。</li>
-        <li>Botの悪用は禁止です。</li>
-        <li>Botのコードや動作をリバースエンジニアリングしないでください。</li>
-        <li>Botの管理者による強制退出は無条件で行われることがあります。</li>
-        <li>Botを用いたスパム行為は禁止です。</li>
-        <li>本規約は予告なく変更される場合があります。</li>
-        <li>データ保存は保証されません。</li>
-        <li>Botの稼働率は常に保証されるものではありません。</li>
-        <li>他ユーザーの迷惑になる使用は禁止です。</li>
-        <li>Discordの利用規約およびガイドラインに違反しないこと。</li>
-        <li>Botの誤動作による損害について運営は責任を負いません。</li>
-        <li>Botのバグ報告は公式窓口にて受け付けます。</li>
-        <li>自己責任でご利用ください。</li>
-        <li>Botの招待は正規のリンクからのみ行ってください。</li>
-        <li>トークンや内部構造の解析行為は禁止です。</li>
-        <li>運営が不適切と判断した場合、機能制限・停止を行います。</li>
-        <li>当Botを通じて取得した情報を第三者へ提供しないでください。</li>
-        <li>Botに過剰な負荷を与える行為は禁止です。</li>
-        <li>Botと誤認されるような偽Botの配布は禁止です。</li>
-        <li>第三者があなたの代わりにBotを使用することは原則禁止です。</li>
-        <li>Botの機能は予告なく変更されることがあります。</li>
-        <li>商用利用には事前の許可が必要です。</li>
-        <li>Botの開発者を偽る行為は禁止です。</li>
-        <li>Botの名称、アイコン、説明を無断で使用しないでください。</li>
-        <li>招待リンクの改変や不正利用は禁止です。</li>
-        <li>ログ記録機能の有無にかかわらず、利用者は適切にBotを使用してください。</li>
-        <li>Botの利用中にDiscordからBANされた場合の責任は負いかねます。</li>
-        <li>Botの再配布は禁止です。</li>
-        <li>Botの使用国や言語による制限を設けることがあります。</li>
-        <li>使用に関して運営から特別な指示があった場合、従ってください。</li>
-        <li>本Botに対する攻撃的・破壊的な行為は法的措置の対象となる場合があります。</li>
-        <li>サーバー数やユーザー数によって機能制限がかかる場合があります。</li>
-        <li>BotへのMentionを過剰に繰り返す行為は禁止です。</li>
-        <li>Botは自己更新される場合があります。</li>
-        <li>Botに関するヘルプは提供できる範囲で行いますが、必ずしも対応できるとは限りません。</li>
-        <li>Botが収集するデータは最低限にとどめ、第三者へ渡ることはありません。</li>
-        <li>管理者は利用状況を記録・分析する場合があります。</li>
-        <li>Discord運営から指摘があった場合、即時対応を行う可能性があります。</li>
-        <li>Botのトラブルがサーバーに影響を与えた場合も、責任は負いかねます。</li>
-        <li>Botの利用開始は、必ず自己の責任で行ってください。</li>
+          <li>本Botを導入することで、本規約に同意したものとみなします。</li>
+          <li>Botの悪用は禁止です。</li>
+          <li>Botのコードや動作をリバースエンジニアリングしないでください。</li>
+          <li>Botの管理者による強制退出は無条件で行われることがあります。</li>
+          <li>Botを用いたスパム行為は禁止です。</li>
+          <li>本規約は予告なく変更される場合があります。</li>
+          <li>データ保存は保証されません。</li>
+          <li>Botの稼働率は常に保証されるものではありません。</li>
+          <li>他ユーザーの迷惑になる使用は禁止です。</li>
+          <li>Discordの利用規約およびガイドラインに違反しないこと。</li>
+          <li>Botの誤動作による損害について運営は責任を負いません。</li>
+          <li>Botのバグ報告は公式窓口にて受け付けます。</li>
+          <li>自己責任でご利用ください。</li>
+          <li>Botの招待は正規のリンクからのみ行ってください。</li>
+          <li>トークンや内部構造の解析行為は禁止です。</li>
+          <li>運営が不適切と判断した場合、機能制限・停止を行います。</li>
+          <li>当Botを通じて取得した情報を第三者へ提供しないでください。</li>
+          <li>Botに過剰な負荷を与える行為は禁止です。</li>
+          <li>Botと誤認されるような偽Botの配布は禁止です。</li>
+          <li>第三者があなたの代わりにBotを使用することは原則禁止です。</li>
+          <li>Botの機能は予告なく変更されることがあります。</li>
+          <li>商用利用には事前の許可が必要です。</li>
+          <li>Botの開発者を偽る行為は禁止です。</li>
+          <li>Botの名称、アイコン、説明を無断で使用しないでください。</li>
+          <li>招待リンクの改変や不正利用は禁止です。</li>
+          <li>ログ記録機能の有無にかかわらず、利用者は適切にBotを使用してください。</li>
+          <li>Botの利用中にDiscordからBANされた場合の責任は負いかねます。</li>
+          <li>Botの再配布は禁止です。</li>
+          <li>Botの使用国や言語による制限を設けることがあります。</li>
+          <li>使用に関して運営から特別な指示があった場合、従ってください。</li>
+          <li>本Botに対する攻撃的・破壊的な行為は法的措置の対象となる場合があります。</li>
+          <li>サーバー数やユーザー数によって機能制限がかかる場合があります。</li>
+          <li>BotへのMentionを過剰に繰り返す行為は禁止です。</li>
+          <li>Botは自己更新される場合があります。</li>
+          <li>Botに関するヘルプは提供できる範囲で行いますが、必ずしも対応できるとは限りません。</li>
+          <li>Botが収集するデータは最低限にとどめ、第三者へ渡ることはありません。</li>
+          <li>管理者は利用状況を記録・分析する場合があります。</li>
+          <li>Discord運営から指摘があった場合、即時対応を行う可能性があります。</li>
+          <li>Botのトラブルがサーバーに影響を与えた場合も、責任は負いかねます。</li>
+          <li>Botの利用開始は、必ず自己の責任で行ってください。</li>
         </ol>
       </details>
     </section>
@@ -315,5 +324,16 @@
   <footer>
     <p>© 2025 Togane Bot</p>
   </footer>
+
+  <script>
+    const toggleAll = document.querySelector('#toggleAllCommands > summary');
+    const commandDetails = document.querySelectorAll('#commandList details');
+
+    toggleAll.addEventListener('click', (e) => {
+      e.preventDefault(); // summaryのデフォルト開閉防止
+      const isAnyClosed = [...commandDetails].some(d => !d.open);
+      commandDetails.forEach(d => d.open = isAnyClosed);
+    });
+  </script>
 </body>
 </html>
