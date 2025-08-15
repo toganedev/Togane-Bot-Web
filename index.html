@@ -285,16 +285,88 @@
   <div class="command">
     <h3>/neko</h3>
     <p>
-      ランダムな猫画像を送信します。画像は外部APIから取得。
+      画像を送信します。画像は外部APIから取得。
     </p>
     <ul>
-      <li>1回実行するごとに違う猫画像が表示</li>
+      <li>1回実行するごとに違う画像が表示</li>
       <li>画像はEmbed形式で送信</li>
-      <li>例：かわいい猫、面白い猫など様々な写真</li>
+      <li>例：Hな画像など様々な写真</li>
+    </ul>
+  </div>
+</details>
+<details>
+  <summary>/play</summary>
+  <div class="command">
+    <h3>/play</h3>
+    <p>
+      指定した音楽をボイスチャンネルで再生します。URLまたはキーワード検索が可能。
+    </p>
+    <ul>
+      <li>対応形式：YouTubeリンク、YouTube検索キーワード、その他サポートされる音源</li>
+      <li>再生中に同じコマンドを使うとキューに追加</li>
+      <li>ボイスチャンネルに参加している必要あり</li>
+      <li>例：<code>/play url:https://youtu.be/xxxx</code> または <code>/play query:lofi music</code></li>
     </ul>
   </div>
 </details>
 
+<details>
+  <summary>/stop</summary>
+  <div class="command">
+    <h3>/stop</h3>
+    <p>
+      再生中の音楽を停止し、キューをすべてクリアします。
+    </p>
+    <ul>
+      <li>管理者または音楽再生権限を持つユーザーのみ使用可能</li>
+      <li>停止後は<code>/play</code>で再度再生可能</li>
+    </ul>
+  </div>
+</details>
+
+<details>
+  <summary>/skip</summary>
+  <div class="command">
+    <h3>/skip</h3>
+    <p>
+      再生中の曲をスキップして、次の曲へ移ります。
+    </p>
+    <ul>
+      <li>キューが空の場合は停止します</li>
+      <li>ボイスチャンネルに参加している必要あり</li>
+      <li>例：次の曲をすぐ聴きたいときに便利</li>
+    </ul>
+  </div>
+</details>
+<details>
+  <summary>/banner</summary>
+  <div class="command">
+    <h3>/banner</h3>
+    <p>
+      指定したユーザーのバナー画像を表示します（未設定の場合はお知らせ）。
+    </p>
+    <ul>
+      <li>対象を指定しない場合は自分のバナーを取得</li>
+      <li>サイズは最大2048pxで表示</li>
+      <li>ユーザーIDと共にEmbedで送信</li>
+    </ul>
+  </div>
+</details>
+
+<details>
+  <summary>/avatar</summary>
+  <div class="command">
+    <h3>/avatar</h3>
+    <p>
+      指定したユーザーのアバター画像を表示します。
+    </p>
+    <ul>
+      <li>対象を指定しない場合は自分のアバターを取得</li>
+      <li>動くアバターにも対応（GIF表示）</li>
+      <li>最大1024pxで高画質表示</li>
+    </ul>
+  </div>
+</details>
     </section>
 
     <section id="terms">
